@@ -1,6 +1,12 @@
 class DesafioGit:
     def mostrar_mensagem_inicial(self):
-        return "Bem-vindo ao Desafio de Git!"
+        print("Bem-vindo ao Desafio de Git!")
+    
+    def listar_comandos_git_basicos(self):
+        comandosGit = ["git init", "git add", "git commit", "git status", "git push"]
+        for comando in comandosGit:
+            print(comando)
+    
 
 """
 Desafio Módulo Git
@@ -16,15 +22,6 @@ Seu objetivo é:
 
 Boa sorte e bons commits! 🚀
 """
-
-def listar_comandos_git_basicos():
-    """
-    Retorna uma lista com os principais comandos básicos do Git.
-    Exemplo de saída:
-    ["git init", "git add", "git commit", "git status", "git push"]
-    """
-    pass
-
 
 def criar_mensagem_commit(funcao_nome):
     """
@@ -58,4 +55,6 @@ def gerar_relatorio_final(funcoes_concluidas):
 
 desafio = DesafioGit()
 if __name__ == "__main__":
-    print(desafio.mostrar_mensagem_inicial())
+    desafio.mostrar_mensagem_inicial()
+    print("Comandos Git Básicos:")
+    desafio.listar_comandos_git_basicos()
