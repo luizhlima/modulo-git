@@ -1,3 +1,7 @@
+class DesafioGit:
+    def mostrar_mensagem_inicial(self):
+        return "Bem-vindo ao Desafio de Git!"
+
 """
 Desafio Módulo Git
 
@@ -12,13 +16,6 @@ Seu objetivo é:
 
 Boa sorte e bons commits! 🚀
 """
-
-def mostrar_mensagem_inicial():
-    """
-    Exibe uma mensagem de boas-vindas ao desafio.
-    Retorno esperado: string com a mensagem "Bem-vindo ao Desafio de Git!"
-    """
-    pass
 
 def listar_comandos_git_basicos():
     """
@@ -58,3 +55,7 @@ def gerar_relatorio_final(funcoes_concluidas):
     "Desafio concluído! 2 funções implementadas com sucesso."
     """
     pass
+
+desafio = DesafioGit()
+if __name__ == "__main__":
+    print(desafio.mostrar_mensagem_inicial())
