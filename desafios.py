@@ -6,6 +6,9 @@ class DesafioGit:
         comandosGit = ["git init", "git add", "git commit", "git status", "git push"]
         for comando in comandosGit:
             print(comando)
+
+    def criar_mensagem_commit(self, funcao_nome):
+        print(f"Implementa função {funcao_nome}")
     
 
 """
@@ -22,16 +25,6 @@ Seu objetivo é:
 
 Boa sorte e bons commits! 🚀
 """
-
-def criar_mensagem_commit(funcao_nome):
-    """
-    Recebe o nome de uma função e retorna uma mensagem de commit padronizada.
-    Exemplo:
-    criar_mensagem_commit("listar_comandos_git_basicos") ->
-    "Implementa função listar_comandos_git_basicos"
-    """
-    pass
-
 
 def verificar_tag_valida(tag):
     """
@@ -58,3 +51,4 @@ if __name__ == "__main__":
     desafio.mostrar_mensagem_inicial()
     print("Comandos Git Básicos:")
     desafio.listar_comandos_git_basicos()
+    desafio.criar_mensagem_commit("verificar_tag_valida")
