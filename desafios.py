@@ -21,6 +21,20 @@ class DesafioGit:
                 return True
             else:
                 return False
+            
+    def gerar_relatorio_final(self, funcoes_concluidas):
+        """
+        Recebe uma lista com os nomes das funções implementadas
+        e retorna uma mensagem final do desafio.
+
+        Exemplo:
+        gerar_relatorio_final(["mostrar_mensagem_inicial", "listar_comandos_git_basicos"])
+        ->
+        "Desafio concluído! 2 funções implementadas com sucesso."
+        """
+
+        total_funcoes = len(funcoes_concluidas)
+        print(f"Desafio concluído! {total_funcoes} funções implementadas com sucesso.")
 
 """
 Desafio Módulo Git
@@ -36,17 +50,6 @@ Seu objetivo é:
 
 Boa sorte e bons commits! 🚀
 """
-def gerar_relatorio_final(funcoes_concluidas):
-    """
-    Recebe uma lista com os nomes das funções implementadas
-    e retorna uma mensagem final do desafio.
-
-    Exemplo:
-    gerar_relatorio_final(["mostrar_mensagem_inicial", "listar_comandos_git_basicos"])
-    ->
-    "Desafio concluído! 2 funções implementadas com sucesso."
-    """
-    pass
 
 desafio = DesafioGit()
 if __name__ == "__main__":
@@ -55,3 +58,4 @@ if __name__ == "__main__":
     desafio.listar_comandos_git_basicos()
     desafio.criar_mensagem_commit("verificar_tag_valida")
     print(desafio.verificar_tag_valida("v2.0"))
+    desafio.gerar_relatorio_final(["mostrar_mensagem_inicial", "listar_comandos_git_basicos", "verificar_tag_valida"])
