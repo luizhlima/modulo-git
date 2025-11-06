@@ -9,7 +9,18 @@ class DesafioGit:
 
     def criar_mensagem_commit(self, funcao_nome):
         print(f"Implementa função {funcao_nome}")
-    
+
+    def verificar_tag_valida(self, tag):
+        """
+        Verifica se uma tag está no formato 'vX.Y' (ex: v1.0, v2.1).
+        Retorna True se o formato for válido, caso contrário False.
+        """
+        if isinstance(tag, str) and tag.startswith('v'):
+            partes = tag[1:].split('.')
+            if len(partes) == 2 and all(parte.isdigit() for parte in partes):
+                return True
+            else:
+                return False
 
 """
 Desafio Módulo Git
@@ -25,15 +36,6 @@ Seu objetivo é:
 
 Boa sorte e bons commits! 🚀
 """
-
-def verificar_tag_valida(tag):
-    """
-    Verifica se uma tag está no formato 'vX.Y' (ex: v1.0, v2.1).
-    Retorna True se o formato for válido, caso contrário False.
-    """
-    pass
-
-
 def gerar_relatorio_final(funcoes_concluidas):
     """
     Recebe uma lista com os nomes das funções implementadas
@@ -52,3 +54,4 @@ if __name__ == "__main__":
     print("Comandos Git Básicos:")
     desafio.listar_comandos_git_basicos()
     desafio.criar_mensagem_commit("verificar_tag_valida")
+    print(desafio.verificar_tag_valida("v2.0"))
